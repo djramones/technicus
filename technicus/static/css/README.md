@@ -1,0 +1,1 @@
+`bootstrap-icons.min.css` and `normalize.min.css` are included and used here under the MIT license. Refer to the `LICENSE*` files for details.

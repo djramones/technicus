@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block html_lang %}{{ page.lang }}{% endblock %}
+
+{% block title %}
+  {{ page.title|striptags }} &mdash; {{ SITENAME }}
+{% endblock %}
+
+{% block head %}
+  {{ super() }}
+  {% if page.description %}
+  <meta name="description" content="{{ page.description }}" />
+  {% endif %}
+{% endblock %}
+
+{% block opengraph %}
+<meta property="og:type" content="article" />
+<meta property="og:title" content="{{ page.title|striptags }} — {{ SITENAME }}" />
+<meta property="og:url" content="{{ SITEURL }}/{{ page.url }}" />
+<meta property="og:image" content="{{ SITEURL }}{{ TECHNICUS_DEFAULT_OG_IMAGE }}" />
+{% if page.description %}
+<meta property="og:description" content="{{ page.description }}" />
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<article class="page">
+  <h2>{{ page.title }}</h2>
+  <div class="page-content">{{ page.content }}</div>
+  {% if page.modified %}
+  <footer>
+    <span class="mono">
+      Last updated:
+      <time datetime="{{ page.modified.isoformat() }}">
+        {{ page.locale_modified }}
+      </time>
+    </span>
+  </footer>
+  {% endif %}
+</article>
+{% endblock %}

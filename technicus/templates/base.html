@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}">
+  <head>
+    {% block head %}
+
+    <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="{{ AUTHOR }}" />
+
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/normalize.min.css" />
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/bootstrap-icons.min.css" />
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pygments.min.css" />
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/style.css" />
+    <script type="text/javascript">
+      window.onload = (event) => {
+        document.getElementsByTagName("body")[0].classList.add("window-load");
+      };
+    </script>
+
+    {% if TECHNICUS_FAVICON %}
+    <link rel="icon" href="{{ SITEURL }}{{ TECHNICUS_FAVICON }}">
+    {% endif %}
+
+    {% endblock head %}
+
+    {% block opengraph %}
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ SITENAME }}" />
+    <meta property="og:url" content="{{ SITEURL }}/" />
+    <meta property="og:image" content="{{ SITEURL }}{{ TECHNICUS_DEFAULT_OG_IMAGE }}" />
+    {% if TECHNICUS_SITE_META_DESC %}
+    <meta property="og:description" content="{{ TECHNICUS_SITE_META_DESC }}" />
+    {% endif %}
+    {% endblock %}
+  </head>
+  <body>
+    <header>
+      <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
+    </header>
+    <nav>
+      <ul>
+        {% for title, url in TECHNICUS_NAV %}
+          <li><a href="{{ url }}">{{ title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+    <footer>
+      <small>
+        {% if TECHNICUS_FOOTER_HTML %}
+        {{ TECHNICUS_FOOTER_HTML }}
+        {% else %}
+        {{ SITENAME }} &copy; {{ AUTHOR }}
+        {% endif %}
+      </small>
+    </footer>
+  </body>
+</html>

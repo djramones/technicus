@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+  {{ period | reverse | join(' ') }} archives &mdash; {{ SITENAME }}
+{% endblock %}
+
+{% block content %}
+<h2><i class="bi-calendar-range"></i> Archives: {{ period | reverse | join(' ') }}</h2>
+<ul>
+{% for article in dates %}
+  <li>
+    <time>{{ article.date|strftime('%Y-%m-%d') }}</time>
+    <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+  </li>
+{% endfor %}
+</ul>
+{% endblock %}

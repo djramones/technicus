@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block html_lang %}{{ article.lang }}{% endblock %}
+
+{% block title %}
+  {{ article.title|striptags }} &mdash; {{ SITENAME }}
+{% endblock %}
+
+{% block head %}
+  {{ super() }}
+  {% if article.description %}
+  <meta name="description" content="{{ article.description }}" />
+  {% endif %}
+{% endblock %}
+
+{% block opengraph %}
+<meta property="og:type" content="article" />
+<meta property="og:title" content="{{ article.title|striptags }} — {{ SITENAME }}" />
+<meta property="og:url" content="{{ SITEURL }}/{{ article.url }}" />
+<meta property="og:image" content="{{ SITEURL }}{{ TECHNICUS_DEFAULT_OG_IMAGE }}" />
+{% if article.description %}
+<meta property="og:description" content="{{ article.description }}" />
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<article class="article">
+
+  <header>
+    <h2>{{ article.title }}</h2>
+    <span class="mono">
+      <time datetime="{{ article.date.isoformat() }}">
+        {{ article.locale_date }}
+      </time>
+      {% if article.modified %}
+        (Updated <time datetime="{{ article.modified.isoformat() }}">{{ article.locale_modified }}</time>)
+      {% endif %}  
+    </span>
+  </header>
+
+  <div class="article-content">{{ article.content }}</div>
+
+  <footer>
+    {% if article.category %}
+    <div>
+        <i class="bi-folder"></i> Category: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+    </div>
+    {% endif %}
+    {% if article.tags %}
+    <div>
+      <i class="bi-tags"></i> Tags:
+        {% for tag in article.tags %}
+          <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+        {% endfor %}
+    </div>
+    {% endif %}
+  </footer>
+
+</article>
+
+<section class="pagination-article">
+  {% if article.next_article %}
+  <div>
+    <i class="bi-arrow-left-circle-fill"></i> Next:
+    <a href="{{ SITEURL }}/{{ article.next_article.url}}" rel="next">
+      {{ article.next_article.title }}
+    </a>
+  </div>
+  {% endif %}
+  {% if article.prev_article %}
+  <div>
+    <i class="bi-arrow-right-circle-fill"></i> Previous:
+    <a href="{{ SITEURL }}/{{ article.prev_article.url}}" rel="prev">
+      {{ article.prev_article.title }}
+    </a>
+  </div>
+  {% endif %}
+</section>
+{% endblock %}
