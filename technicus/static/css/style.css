@@ -47,6 +47,10 @@ body > footer {
     padding: 1rem 0;
 }
 
+.article-tags .article-tag:not(:last-child)::after {
+    content: '•';
+}
+
 .pagination-index,
 .pagination-article {
     margin: 1rem 0;
