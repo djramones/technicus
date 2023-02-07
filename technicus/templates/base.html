@@ -27,13 +27,7 @@
     {% endblock head %}
 
     {% block opengraph %}
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="{{ SITENAME }}" />
-    <meta property="og:url" content="{{ SITEURL }}/" />
     <meta property="og:image" content="{{ SITEURL }}{{ TECHNICUS_DEFAULT_OG_IMAGE }}" />
-    {% if TECHNICUS_SITE_META_DESC %}
-    <meta property="og:description" content="{{ TECHNICUS_SITE_META_DESC }}" />
-    {% endif %}
     {% endblock %}
   </head>
   <body>

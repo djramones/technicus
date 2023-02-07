@@ -32,7 +32,7 @@ This theme assumes that the [`pelican-neighbors`](https://github.com/pelican-plu
 ### Settings
 
 - **`TECHNICUS_FAVICON`** (*optional*): the path to the site favicon relative to `SITEURL`, including the starting slash. For example, `TECHNICUS_FAVICON = '/images/favicon.png'`.
-- **`TECHNICUS_SITE_META_DESC`** (*optional*): the content to be set in the Open Graph or `<meta name="description">` tags for some pages, including the index, that are not articles nor page-type content.
+- **`TECHNICUS_SITE_META_DESC`** (*optional*): the description string to be set in the Open Graph and `<meta name="description">` tags for the home (index) page.
 - **`TECHNICUS_DEFAULT_OG_IMAGE`**: the image to be used for Open Graph (i.e., social sharing previews). This must be set to the path of an image file relative to `SITEURL`, including the starting slash. (Note: despite the setting name, Technicus currently does not support specifying page-specific Open Graph images; i.e., this same image will show up in the social previews for any page in the site.)
 - **`TECHNICUS_NAV`**: a list of two-item `(<title>, <url>)` tuples representing the main menu items. For example,
 
