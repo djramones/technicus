@@ -97,7 +97,9 @@ main ul > li, main ol > li {
     margin: .5em 0;
 }
 blockquote {
-    margin-inline: 1.5rem 1rem;
+    margin-inline: 0 1rem;
+    border-inline-start: 3px solid #3b3b4c;
+    padding-inline-start: 1.4rem;
 }
 
 /* Links */
