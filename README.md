@@ -4,9 +4,9 @@ Technicus is a minimalist, light-on-dark, mobile-friendly [Pelican](https://getp
 
 ![Technicus screenshot](technicus-theme-screenshot.jpg)
 
-## Live example
+## Demo
 
-See this theme in action on the blog [la-technique.reversedelay.net](https://la-technique.reversedelay.net).
+See this theme in action on the blog [tech.reversedelay.net](https://tech.reversedelay.net).
 
 ## Limitations
 
@@ -66,6 +66,6 @@ Aside from the usual content metadata (`Title`, `Date`, `Slug`, `Category`, `Tag
 
 This theme uses and includes the following:
 
-- [Source Sans Pro](https://fonts.google.com/specimen/Source+Sans+Pro/about) and [Source Code Pro](https://github.com/adobe-fonts/source-code-pro) typefaces (SIL Open Font License Version 1.1)
+- Source Sans Pro and [Source Code Pro](https://github.com/adobe-fonts/source-code-pro) typefaces (SIL Open Font License Version 1.1)
 - [Bootstrap Icons](https://icons.getbootstrap.com/) (MIT License)
 - [Normalize.css](https://necolas.github.io/normalize.css/) (MIT License)
