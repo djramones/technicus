@@ -66,6 +66,6 @@ Aside from the usual content metadata (`Title`, `Date`, `Slug`, `Category`, `Tag
 
 This theme uses and includes the following:
 
-- Source Sans Pro and [Source Code Pro](https://github.com/adobe-fonts/source-code-pro) typefaces (SIL Open Font License Version 1.1)
+- [Source Sans 3](https://github.com/adobe-fonts/source-sans) and [Source Code Pro](https://github.com/adobe-fonts/source-code-pro) typefaces (SIL Open Font License Version 1.1)
 - [Bootstrap Icons](https://icons.getbootstrap.com/) (MIT License)
 - [Normalize.css](https://necolas.github.io/normalize.css/) (MIT License)
