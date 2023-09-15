@@ -4,11 +4,13 @@
 
 {% block content %}
 <h2><i class="bi-tags"></i> Tags</h2>
-<ul>
-{% for tag, articles in tags|sort %}
-  <li>
-    <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
-  </li>
-{% endfor %}
-</ul>
+<div class="special-page-content">
+  <ul>
+  {% for tag, articles in tags|sort %}
+    <li>
+      <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+    </li>
+  {% endfor %}
+  </ul>
+</div>
 {% endblock %}

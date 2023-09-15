@@ -4,11 +4,13 @@
 
 {% block content %}
 <h2><i class="bi-folder"></i> Categories</h2>
-<ul>
-{% for category, articles in categories|sort %}
-  <li>
-    <a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a>
-  </li>
-{% endfor %}
-</ul>
+<div class="special-page-content">
+  <ul>
+  {% for category, articles in categories|sort %}
+    <li>
+      <a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a>
+    </li>
+  {% endfor %}
+  </ul>
+</div>
 {% endblock %}
