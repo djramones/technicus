@@ -10,8 +10,9 @@
   <ul>
   {% for article in dates %}
     <li>
-      <time class="archive-item-time">{{ article.date|strftime('%Y-%m-%d') }}</time>
       <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+      <br>
+      <time>{{ article.date|strftime('%Y-%m-%d') }}</time>
     </li>
   {% endfor %}
   </ul>
