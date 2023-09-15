@@ -87,6 +87,9 @@ h4, h5, h6 {
     font-size: 1em;
     font-weight: 700;
 }
+strong, b {
+    font-weight: 900;
+}
 time, pre, code,
 .mono {
     font-size: 14px;
