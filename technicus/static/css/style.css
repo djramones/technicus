@@ -155,3 +155,11 @@ main, .preview-article,
 div.highlight {
     border-radius: .5rem;
 }
+
+/* Images */
+
+.article-content img,
+.page-content img {
+    max-width: 100%;
+    height: auto;
+}
