@@ -1,3 +1,8 @@
+html {
+    border-top: .6rem solid rgb(103, 180, 180);
+    background-color: #1b1b24;
+    color: rgb(222, 222, 222);
+}
 body {
     display: grid;
     grid-template-rows: auto auto 1fr auto;
@@ -5,8 +10,6 @@ body {
     max-width: 750px;
     margin: 0 auto;
     padding: 0 1.5rem;
-    background-color: #1b1b24;
-    color: rgb(222, 222, 222);
 }
 body > header > h1 {
     margin: 4rem 0 0;
@@ -123,6 +126,13 @@ blockquote {
     margin-inline: 0 1rem;
     border-inline-start: 3px solid #3b3b4c;
     padding-inline-start: 1.4rem;
+}
+hr {
+    width: 70%;
+    height: 1px;
+    border: 0;
+    background-color: #5a5a6f;
+    margin: 2.5rem auto;
 }
 
 /* Links */
