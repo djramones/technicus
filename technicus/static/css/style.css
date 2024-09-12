@@ -1,12 +1,11 @@
 html {
     border-top: .6rem solid rgb(103, 180, 180);
     background-color: #1b1b24;
-    color: rgb(222, 222, 222);
 }
 body {
     display: grid;
     grid-template-rows: auto auto 1fr auto;
-    min-height: 100vh;
+    min-height: calc(100svh - .6rem);
     max-width: 750px;
     margin: 0 auto;
     padding: 0 1.5rem;
@@ -68,8 +67,12 @@ body > footer {
 
 /* Typography */
 
-body {
+html {
     font-family: 'Source Sans 3', sans-serif;
+    font-size: 16px;
+    color: rgb(222, 222, 222);
+}
+body {
     font-size: 18px;
 }
 h1, h2, h3, h4, h5, h6,
