@@ -140,7 +140,7 @@ hr {
 
 /* Links */
 
-body > header h1 a {
+a {
     text-decoration: none;
 }
 a:link, a:visited {
