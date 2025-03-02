@@ -23,6 +23,12 @@
 {% endif %}
 {% endblock %}
 
+{% block fediversemeta %}
+  {% if TECHNICUS_FEDIVERSE_CREATOR %}
+    <meta name="fediverse:creator" content="{{ TECHNICUS_FEDIVERSE_CREATOR }}" />
+  {% endif %}
+{% endblock %}
+
 {% block content %}
 <article class="page">
   <h2>{{ page.title }}</h2>
