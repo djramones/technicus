@@ -17,7 +17,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:title" content="{{ page.title|striptags }} — {{ SITENAME }}" />
 <meta property="og:url" content="{{ SITEURL }}/{{ page.url }}" />
-<meta property="og:image" content="{{ SITEURL }}{{ TECHNICUS_DEFAULT_OG_IMAGE }}" />
+{% if page.og_image %}
+  <meta property="og:image" content="{{ SITEURL }}{{ page.og_image }}" />
+{% else %}
+  <meta property="og:image" content="{{ SITEURL }}{{ TECHNICUS_DEFAULT_OG_IMAGE }}" />
+{% endif %}
 {% if page.description %}
 <meta property="og:description" content="{{ page.description }}" />
 {% endif %}

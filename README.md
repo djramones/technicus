@@ -33,7 +33,7 @@ This theme assumes that the [`pelican-neighbors`](https://github.com/pelican-plu
 
 - **`TECHNICUS_FAVICON`** (*optional*): the path to the site favicon relative to `SITEURL`, including the starting slash. For example, `TECHNICUS_FAVICON = '/images/favicon.png'`.
 - **`TECHNICUS_SITE_META_DESC`** (*optional*): the description string to be set in the Open Graph and `<meta name="description">` tags for the home (index) page.
-- **`TECHNICUS_DEFAULT_OG_IMAGE`**: the image to be used for Open Graph (i.e., social sharing previews). This must be set to the path of an image file relative to `SITEURL`, including the starting slash. (Note: despite the setting name, Technicus currently does not support specifying page-specific Open Graph images; i.e., this same image will show up in the social previews for any page in the site.)
+- **`TECHNICUS_DEFAULT_OG_IMAGE`**: the image to be used by default for Open Graph (i.e., social sharing previews). This must be set to the path of an image file relative to `SITEURL`, including the starting slash.
 - **`TECHNICUS_FEDIVERSE_CREATOR`**: Fediverse account handle to be used for the `fediverse:creator` meta tag. See “[Highlighting journalism on Mastodon](https://blog.joinmastodon.org/2024/07/highlighting-journalism-on-mastodon/)”; on Mastodon, do not forget to update profile settings to allowlist the relevant domains to fully enable support for this tag.
 - **`TECHNICUS_NAV`**: a list of two-item `(<title>, <url>)` tuples representing the main menu items. For example,
 
@@ -62,6 +62,7 @@ Aside from the usual content metadata (`Title`, `Date`, `Slug`, `Category`, `Tag
 - `Modified`: the last-modified date of the content; displayed on both articles and pages
 - `Description`: text that goes into the Open Graph and `<meta name="description">` tags; it is recommended to keep this short
 - `Summary`: used on the index pages; can be set to blank (e.g., in Markdown content, a `Summary: ` line) to disable summaries on the index pages (so that only the title shows up)
+- `OG_Image`: the image to be used for Open Graph (i.e., social sharing previews), overriding the site-wide `TECHNICUS_DEFAULT_OG_IMAGE` setting. This must be set to the path of an image file relative to `SITEURL`, including the starting slash. This works both for articles and pages.
 
 ## Acknowledgements
 
