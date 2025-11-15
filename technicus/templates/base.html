@@ -35,14 +35,14 @@
   <body>
     <header>
       <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
+      <nav>
+        <ul>
+          {% for title, url in TECHNICUS_NAV %}
+            <li><a href="{{ url }}">{{ title }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
     </header>
-    <nav>
-      <ul>
-        {% for title, url in TECHNICUS_NAV %}
-          <li><a href="{{ url }}">{{ title }}</a></li>
-        {% endfor %}
-      </ul>
-    </nav>
     <main>
       {% block content %}{% endblock %}
     </main>

@@ -31,6 +31,7 @@ This theme assumes that the [`pelican-neighbors`](https://github.com/pelican-plu
 
 ### Settings
 
+- **`CATEGORIES_URL`** & **`TAGS_URL`**: the URLs for the all-categories and all-tags templates, respectively. These are required for the links on the individual category/tag templates back to the all-categories/tags pages. Do not include the starting slash.
 - **`TECHNICUS_FAVICON`** (*optional*): the path to the site favicon relative to `SITEURL`, including the starting slash. For example, `TECHNICUS_FAVICON = '/images/favicon.png'`.
 - **`TECHNICUS_SITE_META_DESC`** (*optional*): the description string to be set in the Open Graph and `<meta name="description">` tags for the home (index) page.
 - **`TECHNICUS_DEFAULT_OG_IMAGE`**: the image to be used by default for Open Graph (i.e., social sharing previews). This must be set to the path of an image file relative to `SITEURL`, including the starting slash.
