@@ -46,6 +46,12 @@ body > footer:hover {
 .special-page-content {
     margin: 4rem 0;
 }
+:nth-last-child(1 of .preview-article) {
+    padding-bottom: 4rem;
+}
+.preview-article-content > :last-child {
+    margin-bottom: 0;
+}
 
 .article > footer {
     border-top: .3rem solid #5a5a6f;
