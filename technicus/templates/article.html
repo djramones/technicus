@@ -39,11 +39,14 @@
   <header>
     <h2>{{ article.title }}</h2>
     <span class="mono">
+      {% if TECHNICUS_SHOW_ARTICLE_BYLINE %}
+        by {{ article.author }} •
+      {% endif %}
       <time datetime="{{ article.date.isoformat() }}">
         {{ article.locale_date }}
       </time>
       {% if article.modified %}
-        (Updated <time datetime="{{ article.modified.isoformat() }}">{{ article.locale_modified }}</time>)
+        (Updated&nbsp;<time datetime="{{ article.modified.isoformat() }}">{{ article.modified|strftime('%Y-%m-%d') }}</time>)
       {% endif %}  
     </span>
   </header>

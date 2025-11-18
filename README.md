@@ -44,6 +44,7 @@ This theme assumes that the [`pelican-neighbors`](https://github.com/pelican-plu
             ('Tags', '/tags/'),
         ]
 
+- **`TECHNICUS_SHOW_ARTICLE_BYLINE`** (*optional*): if present and set to `True` (or any truthy value), articles will show “by Author” under the title, where Author is the article’s [`author` metadata](https://docs.getpelican.com/en/latest/content.html#file-metadata).
 - **`TECHNICUS_FOOTER_HTML`**: the contents of this will show up in the footer wrapped in `<small>` tags. For example, here is a footer that takes advantage of the [Bootstrap Icons](https://icons.getbootstrap.com/) included in this theme:
 
         TECHNICUS_FOOTER_HTML = """
