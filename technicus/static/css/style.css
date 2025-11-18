@@ -191,6 +191,7 @@ hr {
     background-color: #5a5a6f;
     margin: 2.5rem auto;
 }
+.text-nowrap { text-wrap: nowrap; }
 
 /* Links */
 
