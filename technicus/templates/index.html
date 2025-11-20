@@ -35,14 +35,20 @@
 <section class="pagination-index">
   {% if articles_page.has_previous() %}
   <div>
-    <i class="bi-arrow-left-circle"></i>
-    <a href="{{ SITEURL }}/{{ articles_previous_page.url }}" rel="prev">Previous page</a>
+    <a href="{{ SITEURL }}/{{ articles_previous_page.url }}" rel="prev">
+      <i class="pagination-index-icon bi-arrow-left-square"></i>
+      <br>
+      Previous page
+    </a>
   </div>
   {% endif %}
   {% if articles_page.has_next() %}
   <div>
-    <a href="{{ SITEURL }}/{{ articles_next_page.url }}" rel="next">Next page</a>
-    <i class="bi-arrow-right-circle"></i>
+    <a href="{{ SITEURL }}/{{ articles_next_page.url }}" rel="next">
+      <i class="pagination-index-icon bi-arrow-right-square"></i>
+      <br>
+      Next page
+    </a>
   </div>
   {% endif %}
 </section>

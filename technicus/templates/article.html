@@ -76,21 +76,35 @@
 </article>
 
 <section class="pagination-article">
-  {% if article.next_article %}
-  <div>
-    <i class="bi-arrow-left-circle-fill"></i> Next:
+  <div
+    {% if article.next_article %}
+    class="pagination-article-block"
+    {% endif %}
+  >
+    {% if article.next_article %}
+    <i class="bi-arrow-left-circle-fill"></i>
+    <br>
+    <span class="pagination-article-labels">Next</span>
+    <br>
     <a href="{{ SITEURL }}/{{ article.next_article.url}}" rel="next">
       {{ article.next_article.title }}
     </a>
+    {% endif %}
   </div>
-  {% endif %}
-  {% if article.prev_article %}
-  <div>
-    <i class="bi-arrow-right-circle-fill"></i> Previous:
+  <div
+    {% if article.prev_article %}
+    class="pagination-article-block"
+    {% endif %}
+  >
+    {% if article.prev_article %}
+    <i class="bi-arrow-right-circle-fill"></i>
+    <br>
+    <span class="pagination-article-labels">Previous</span>
+    <br>
     <a href="{{ SITEURL }}/{{ article.prev_article.url}}" rel="prev">
       {{ article.prev_article.title }}
     </a>
+    {% endif %}
   </div>
-  {% endif %}
 </section>
 {% endblock %}
